@@ -1,0 +1,24 @@
+/* These CSS styles are temporary just to show how
+   the layout will work. As the divs will change size
+   based on their content then we can edit the min
+   and max height properties ive set as an example
+   of the layout of this page. */
+   .notifications{
+    min-height: 100px;
+    border: 3px solid black;
+   }
+   .calender{
+    min-height: 400px;
+    border: 3px solid black;}
+   .notes{
+    border: 3px solid black;
+    min-height: 500px;
+   }
+   .sliding-gallery{
+    min-height: 400px;
+    border: 3px solid black;
+   }
+   .help{
+    min-height: 100px;
+    border: 3px solid black;
+   }
