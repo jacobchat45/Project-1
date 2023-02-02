@@ -12,7 +12,7 @@ function init(){
     notes = storedNotes;
   };
 
-  renderStoredNotes();
+  renderStoredNotes(this);
 }
 
 init();
@@ -50,6 +50,11 @@ function noteFunctionality(note){
          clearButton.addEventListener("click", function(event){
            event.preventDefault();
         this.parentElement.remove();
+        let element = event.target;
+        let index = element.parentElement.getAttribute("added-note");
+        notes.splice(index, 1);
+        saveNotes();
+        renderStoredNotes();
       });
       note.append(clearButton);
 
@@ -70,7 +75,8 @@ function saveNotes(){
 }
 function addNotes(input){
   let newNote = document.createElement("div");
-  newNote.setAttribute("class", "col-lg-2 col-md-6 col-sm-6");
+  newNote.setAttribute("class", "added-note");
+  
   newNote.innerHTML = input;
   notesBody.append(newNote);
   noteFunctionality(newNote);
@@ -86,6 +92,10 @@ function renderStoredNotes(){
 
   for(let i = 0; i < notes.length; i++){
     let note = notes[i];
-     
+    let newNote = document.createElement("div");
+    newNote.setAttribute("class", "added-note");
+    newNote.innerHTML = note;
+    notesBody.append(newNote);
+    noteFunctionality(newNote);
   }
 }
