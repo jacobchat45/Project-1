@@ -28,5 +28,11 @@
 
 #logoimg{
     padding: 20px;
+    border-radius: 20px;
+}
+
+.remove-button{
+    background-color: red;
+    color: red;
 
 }
