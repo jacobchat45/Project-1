@@ -94,5 +94,24 @@ function renderStoredNotes(){
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const spotifyAuth = "efd940e2f1cd461eb517ab7f9b55709c";
 
+
+// "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchResult}&format=json"
+
+const wikiSearchInput = document.querySelector("#search-input-wiki");
+const wikiSearchButton = document.querySelector("#search-wiki");
+
+wikiSearchButton.addEventListener("click", function(event){
+  event.preventDefault();
+  let searchValue = wikiSearchInput.value;
+  console.log(searchValue);
+   
+  let queryURL = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + searchValue + "&format=json"
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response){
+      console.log(response.query.search)
+    })
+   }
+);
