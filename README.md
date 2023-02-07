@@ -6,7 +6,7 @@ We’ve chosen to create this simple application to enable those finding it diff
 
 ##  Purpose of Interactive Application
 
-The motivation behind, choosing to make a revision reminder app is to help those on a course increase productivity and keep going on track, for example during a boot camp coding course. 
+The motivation behind our choosing to make a revision reminder app is to help those on a course increase productivity and keep going on track, for example during a boot camp coding course. 
 
 ## Features of the application 
 
