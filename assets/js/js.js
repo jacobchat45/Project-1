@@ -1,3 +1,5 @@
+// JAVASCRIPT FOR NOTES
+
 let notesInput = document.querySelector("#search-input")
 let notesButton = document.querySelector("#search-button");
 let notesBody = document.querySelector("#history");
@@ -16,7 +18,7 @@ function init(){
 }
 
 init();
-// this gets the value of what's submitted inside the form and then calls the getWeather function
+
   notesButton.addEventListener("click", function(event){
     event.preventDefault();
    inputResult = notesInput.value;
@@ -26,20 +28,7 @@ init();
   }
     
   )
-// let notesClicked = false;
-// clearNotes.addEventListener("click", function(event){
-//   event.preventDefault();
-//    if(notesClicked === false){
-//     notesClicked = true;
-//      notesBody.remove();
-//    }
-//    else{
-//     notesClicked = false;
-//     addNotes();
-//    }
-   
-   
-// });
+
 
 function noteFunctionality(note){
       let clearButton = document.createElement("button");
@@ -99,3 +88,11 @@ function renderStoredNotes(){
     noteFunctionality(newNote);
   }
 }
+
+
+// END NOTES JAVASCRIPT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const spotifyAuth = "efd940e2f1cd461eb517ab7f9b55709c";
+
