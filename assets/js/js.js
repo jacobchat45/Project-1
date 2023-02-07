@@ -111,7 +111,15 @@ wikiSearchButton.addEventListener("click", function(event){
     url: queryURL,
     method: "GET"
   }).then(function(response){
-      console.log(response.query.search[0])
+      let topResult = response.query.search[0];
+      console.log(topResult);
+      let resultsBody = document.querySelector("#history-wiki");
+      let resultsText = document.createElement("div");
+      resultsText.innerHTML = topResult.title;
+      resultsBody.append(resultsText);
+// example url with returned json results: 
+// https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=ronaldo&format=json
+// use to analyse structure of returned results
     })
    }
 );
