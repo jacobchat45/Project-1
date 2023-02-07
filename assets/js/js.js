@@ -106,12 +106,12 @@ wikiSearchButton.addEventListener("click", function(event){
   let searchValue = wikiSearchInput.value;
   console.log(searchValue);
    
-  let queryURL = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + searchValue + "&format=json"
+  let queryURL = "https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=" + searchValue;
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response){
-      console.log(response.query.search)
+      console.log(response.query.search[0])
     })
    }
 );
