@@ -4,7 +4,7 @@
    and max height properties ive set as an example
    of the layout of this page. */
 *{
-    font-family: serif;
+    font-family: Georgia, serif;
 }
    .calendar{
     min-height: 750px;
@@ -15,7 +15,10 @@
    }
 
 .jumbotron{
-    max-height: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #logoimg{
@@ -51,15 +54,30 @@
     color: black;
 }
 #footer-logo{
-    border: 3px solid black;
+    display: flex;
+
     border-radius: 5px;
     color: #f2f2f2;
-    background-color: #36383A;
+    background-color: white;
     padding: 5px;
-    box-shadow: 5px 2px #888888;
-    margin-top: 20px;
+  
+    margin-top: 10px;
     padding: 15px;
-   
+   align-items: center;
+   justify-content: space-around;
+}
+
+#revise{
+    background-color: black;
+    color: white;
+    text-decoration: bold;
+    margin: 10px;
+}
+
+#now{
+    background-color: white;
+    color: black;
+    margin: 10px;
 }
 #github-link:hover{
     box-shadow: 5px 2px #888888;
