@@ -107,6 +107,7 @@ wikiSearchButton.addEventListener("click", function(event){
   console.log(searchValue);
    
   let queryURL = "https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=" + searchValue;
+
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -116,7 +117,17 @@ wikiSearchButton.addEventListener("click", function(event){
       let resultsBody = document.querySelector("#history-wiki");
       let resultsText = document.createElement("div");
       resultsText.innerHTML = topResult.title;
+      let titleURL = "https://en.wikipedia.org/wiki/" + topResult.title;
       resultsBody.append(resultsText);
+      let resultsMain = document.createElement("div");
+      resultsMain.innerHTML = topResult.snippet + "...";
+      resultsBody.append(resultsMain);
+      let linkHolder = document.createElement("a");
+      linkHolder.setAttribute("href", titleURL);
+      linkHolder.setAttribute("id", "wikipedia-link");
+      linkHolder.innerHTML = "Click to read more..."
+      resultsBody.append(linkHolder);
+
 // example url with returned json results: 
 // https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=ronaldo&format=json
 // use to analyse structure of returned results
