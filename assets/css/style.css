@@ -28,7 +28,12 @@
     background-color: #F4F4F4
 }
 
-
+.wiki-item{
+    margin: 10px;
+    padding: 5px;
+    border: 2px black solid;
+    background-color: #EFEFEF
+}
 
 .jumbotron{
     height: 200px;
@@ -36,9 +41,10 @@
     align-items: center;
     justify-content: space-between;
 }
-#history-wiki{
-    background-color: red;
-    color: red;
+.added-note{
+    font-family: "Lucida Handwriting";
+    background-color: #FFF5AF;
+    text-decoration: underline;
 }
 #logoimg{
     padding: 20px;

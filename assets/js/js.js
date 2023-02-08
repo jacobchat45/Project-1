@@ -116,22 +116,25 @@ wikiSearchButton.addEventListener("click", function(event){
       let topResult = response.query.search[0];
       console.log(topResult);
       let resultsBody = document.querySelector("#history-wiki");
+      let newResult = document.createElement("div");
+
       let resultsText = document.createElement("div");
       resultsText.innerHTML = topResult.title;
       let titleURL = "https://en.wikipedia.org/wiki/" + topResult.title;
-      resultsBody.append(resultsText);
+      newResult.append(resultsText);
       // if enough time, put all this into a parent element so
       // results show on top of eachother instead of below
       let resultsMain = document.createElement("div");
       resultsMain.innerHTML = topResult.snippet + "...";
-      resultsBody.append(resultsMain);
+      newResult.append(resultsMain);
       let linkHolder = document.createElement("a");
       linkHolder.setAttribute("href", titleURL);
       linkHolder.setAttribute("id", "wikipedia-link");
       linkHolder.setAttribute("target", "_blank");
       linkHolder.innerHTML = "Click to read more...";
-      resultsBody.append(linkHolder);
-
+      newResult.append(linkHolder);
+      resultsBody.setAttribute("class", "wiki-item");
+    resultsBody.prepend(newResult);
 // example url with returned json results: 
 // https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=ronaldo&format=json
 // use to analyse structure of returned results
