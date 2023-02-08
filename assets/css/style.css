@@ -40,7 +40,11 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.added-note{
+    font-family: "Lucida Handwriting";
+    background-color: #FFF5AF;
+    text-decoration: underline;
+}
 #logoimg{
     padding: 20px;
     border-radius: 20px;
