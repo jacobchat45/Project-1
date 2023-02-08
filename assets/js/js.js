@@ -4,6 +4,7 @@ let notesInput = document.querySelector("#search-input")
 let notesButton = document.querySelector("#search-button");
 let notesBody = document.querySelector("#history");
 let clearNotes = document.querySelector("#clear-button");
+let notificationEl = document.querySelector("#notification-amount")
 let inputResult;
 let returnedData;
 let notes = [];
@@ -146,3 +147,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   calendar.render();
 });
+
+// Notification Bell
+function notification (){
+  let notes= JSON.parse(localStorage.getItem("notes"))
+  if(!notes){
+    return
+  }
+  notificationEl.innerHTML = notes.length
+}
+notification()
