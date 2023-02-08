@@ -16,6 +16,7 @@ function init(){
   };
 
   renderStoredNotes(this);
+  notification()
 }
 
 init();
@@ -26,6 +27,7 @@ init();
     console.log(inputResult); 
     addNotes(inputResult);
     notes.push(inputResult);
+    notification();
   }
     
   )
@@ -45,6 +47,7 @@ function noteFunctionality(note){
         notes.splice(index, 1);
         saveNotes();
         renderStoredNotes();
+        notification()
       });
       note.append(clearButton);
 
@@ -62,6 +65,7 @@ function noteFunctionality(note){
 
 function saveNotes(){
   localStorage.setItem("notes", JSON.stringify(notes));
+  notification();
 }
 function addNotes(input){
   let newNote = document.createElement("div");
@@ -70,12 +74,10 @@ function addNotes(input){
   newNote.innerHTML = input;
   notesBody.append(newNote);
   noteFunctionality(newNote);
-  
-}
-
-function setNoteStorage(note){
 
 }
+
+
 
 function renderStoredNotes(){
 
