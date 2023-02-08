@@ -127,7 +127,8 @@ wikiSearchButton.addEventListener("click", function(event){
       let linkHolder = document.createElement("a");
       linkHolder.setAttribute("href", titleURL);
       linkHolder.setAttribute("id", "wikipedia-link");
-      linkHolder.innerHTML = "Click to read more..."
+      linkHolder.setAttribute("target", "_blank");
+      linkHolder.innerHTML = "Click to read more...";
       resultsBody.append(linkHolder);
 
 // example url with returned json results: 

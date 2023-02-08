@@ -3,25 +3,17 @@
    based on their content then we can edit the min
    and max height properties ive set as an example
    of the layout of this page. */
-   .notifications{
-    min-height: 100px;
-    border: 3px solid black;
-   }
+*{
+    font-family: serif;
+}
    .calendar{
-    min-height: 400px;
+    min-height: 750px;
     border: 3px solid black;}
    .notes{
     border: 3px solid black;
-    min-height: 500px;
+    min-height: 750px;
    }
-   .sliding-gallery{
-    min-height: 400px;
-    border: 3px solid black;
-   }
-   .help{
-    min-height: 100px;
-    border: 3px solid black;
-   }
+
 .jumbotron{
     max-height: 250px;
 }
@@ -32,5 +24,44 @@
 }
 
 #wikipedia-link{
-    text-decoration: none,
+    text-decoration: none;
+}
+
+#wiki-information{
+    text-align: center;
+}
+
+#form-heading{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.footer{
+    background-color: grey;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    /* change above margin as needed */
+}
+
+#github-link{
+    text-decoration: none;
+    color: black;
+}
+#footer-logo{
+    border: 3px solid black;
+    border-radius: 5px;
+    color: #f2f2f2;
+    background-color: #36383A;
+    padding: 5px;
+    box-shadow: 5px 2px #888888;
+    margin-top: 20px;
+    padding: 15px;
+   
+}
+#github-link:hover{
+    box-shadow: 5px 2px #888888;
+    background-color: #f2f2f2;
 }
