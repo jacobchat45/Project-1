@@ -121,8 +121,7 @@ wikiSearchButton.addEventListener("click", function(event){
       resultsText.innerHTML = topResult.title;
       let titleURL = "https://en.wikipedia.org/wiki/" + topResult.title;
       newResult.append(resultsText);
-      // if enough time, put all this into a parent element so
-      // results show on top of eachother instead of below
+   
       let resultsMain = document.createElement("div");
       resultsMain.innerHTML = topResult.snippet + "...";
       newResult.append(resultsMain);
