@@ -134,6 +134,15 @@ wikiSearchButton.addEventListener("click", function(event){
 // example url with returned json results: 
 // https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=ronaldo&format=json
 // use to analyse structure of returned results
+
     })
    }
 );
+// Calender API
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+  });
+  calendar.render();
+});
